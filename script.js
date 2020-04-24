@@ -9,10 +9,10 @@ handlers.getHeroes = function (args, context) {
         Keys: ["heroes"]
     });
 
-    const heroes = playerData.Data["heroes"];
+    const heroes = playerData.Data["heroes"]["Value"];
 
     return {
-        userHeroes: heroes,
+        userHeroes: JSON.stringify(heroes),
         playerTag
     };
 };
