@@ -58,16 +58,6 @@ handlers.helloWorld = function (args, context) {
     return { messageValue: message };
 };
 
-handlers.getHeroes = function (args, context) {
-
-    var playerData = server.GetUserInternalData({
-        PlayFabId: currentPlayerId,
-        Keys: ["heroes"]
-    });
-
-    return playerData;
-};
-
 // This is a simple example of making a PlayFab server API call
 handlers.makeAPICall = function (args, context) {
     var request = {
