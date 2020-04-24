@@ -59,10 +59,10 @@ handlers.helloWorld = function (args, context) {
 };
 
 handlers.getHeroes = function (args, context) {
-    
+
     var playerData = server.GetUserInternalData({
         PlayFabId: currentPlayerId,
-        Keys: ["last_move_timestamp"]
+        Keys: ["heroes"]
     });
 
     return playerData;
